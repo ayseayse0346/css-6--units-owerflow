@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+}
+
+.img-float{
+    width: 40%;
+    float: left;  /* resmi haavaya kaldırdı ve aşağıdaki blok element olan paragrafın üstüne gelmiş oldu. paragraf bloğu fotonun altında kalmış oldu. yazılar ise otomatik altına girmez yanına geçer. içerik kısmını altına almaz bu şekilde çalışıyor.*/
+
+    margin-top: 10px;
+   margin-left:  10px;
+   margin-right: 20px;  /* resimle yanındaki yazının arasını açamk için kullandık.*/
+    
+   
+}
+
+.par1{
+background-color: brown;
+
+}
+ /* float yüzüyor ve alttan gelen elementleri altına alıyor bozukluk oluşuyor. par2 nin burdaki floattan etkilenmemsi için clear yapmam lazım */
+.par2{
+/* clear: both; bu par2 den önceki  floattan kaynaklanan bozukluktan etkilenmiyorlar. */
+clear: left;
+/* clear: left; bu da olur. */
+}
+
+.clear{
+    clear: both;
+  
+}    /* BOŞ BİR DİV clear diviatılır. floatın bittiği yere o her iki tarafı da temizler. */
+/* !clear demek : floattan kaynaklanan bozuklukları önlemek için kullanılır. */
+
+/* ? NOT:bunların hepsi p div ve resim bodynin içinde oldukları için yani aynı hiyerarşide oldukları için birbirinden etkileniyolar.  */
+
+/* ?CONTAİNER İÇİNDE ÖRENK YAPIYORUZ ŞİMDİ. */
+
+.container{
+    /* border: 2px solid red; */
+}
+
+.box{
+    float: left;  /*bunların hepsine tek tek float left demek yerine aynı özelliğe sahip olduğu için burada verirsek olur.*/
+}
+.box1{
+background-color: blue;
+/* float: left; */
+width: 35%;
+height: 30vh;
+
+}
+.box2{
+background-color: cadetblue;
+/* float: left; */
+width: 35%;
+height: 30vh;
+background-image: url("https://picsum.photos/id/1020/600/400");
+background-size: cover;
+}
+.box3{
+background-color: blueviolet;
+/* float: left; */
+width: 30%;
+height: 30vh;
+background-image: url("https://picsum.photos/id/237/200/200");
+background-size: cover;
+}

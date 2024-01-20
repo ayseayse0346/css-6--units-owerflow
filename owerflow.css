@@ -1,0 +1,33 @@
+.box{
+    border: 5px solid green;
+    margin-bottom: 4rem ;
+    width: 20rem;
+    height: 4rem;
+    background-color: burlywood;
+}
+
+.box1{
+    overflow: visible; /* default budur.*/
+}
+.box2{
+overflow: hidden;
+}
+.box3{
+overflow: scroll;
+
+}
+.box4{
+    height: 13rem;
+overflow: auto; /*yüksekilği sığarsa ayaralrsak yazıyı sığdırır. sığmazsa scroll özelliği verir.*/
+}
+.box5{
+overflow-y: auto; /*sadece scrol barı yukardan aşğıya verir. kenarda altta vermez. x yaparsak altta verir.*/
+}
+
+.box5::-webkit-scrollbar{
+    /* width:0 ; */
+    /* visibility: hidden; */
+    display: none;
+}
+/* scrolların gözğkmesşni istemezsek .box5::-webkit-scrollbar{
+ width 0 dersek yok olur. 2. yöntem visibility:hidden 3.yöntem display none }*/

@@ -1,0 +1,58 @@
+
+/*.container *bu containerin içindeki herşey demek  */
+.container {
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+.container *{
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+header{
+background-color: chartreuse;
+margin-top: 10px;
+}
+
+main{
+background-color: blueviolet;
+padding: 5px;  /* mor alanı görmek için verdik*/
+/* height: 350px; */
+/* overflow: auto; taşan kısımları içime al demek */
+}
+
+aside{
+background-color: gold;
+height: 300px;
+width: 25%;
+float: left;
+}
+
+article{
+background-color: brown;
+height: 300px;
+width: 70%;
+float: left;
+}
+/* floattan kaynaklanan olumsuz bir durum var ve bunu clearla çözüyoruz.htmlde oluşturduk.bu da ideal çözüm değil. */
+
+
+/*  .clear{
+    clear: both;
+    border: none;
+} !*/
+
+footer{
+background-color: palevioletred;
+
+}
+
+/* İDEAL ÇÖZÜM: CLEARFİX */
+
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
