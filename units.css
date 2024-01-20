@@ -1,0 +1,91 @@
+
+
+/* sağa ve sola yapışmaması body deki default olarak verilen  marjin değeridir.bunu da * ile öargin ve paddingi sıfırlayacağız.*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* eğer biz yükseklik değeri vermek istiyorsak yüksekliği ayarlamamız gerekiyor.yüksekliği vermez isek içindekilerin yüksekliğini de yaralyamayız. bodye yükseklik vermezez isek içeriği kadardır  yüseliği içeriği doldukça oluşmaya başlıyor.*/
+
+html{
+    /* bir remim 16 px olduğunu değiştirebilirim.  burada html açtık ve bunu default 16 px di burda 10 px e çevirdik.*/
+    font-size: 10px;
+}
+
+body{
+border: 1px solid red;
+/* height: 100vh; da verebilirz*/
+height: 600px;
+
+}
+
+.abs{
+    background-color: chocolate;
+    width: 350px;
+    /* px,cm,in, değeri absolute olduğu için neyse o değişmez. browsere ne kadar büyütüp küçültürsek yine aynı kalır değişmez  */
+    width: 10cm;
+    width: 2in;
+/* abs height değeri işlemez çünkü bunun paretne body işlemesi için önce bodye absloute değer vermeliyiz. */
+    height: 50%;
+
+}
+
+.div2{
+    background-color: brown;
+    width: 50%;
+/* div3ün parentenea px değerinde uani absolute değer vererek div 3ün yüksekliğini ayarlayabildik. */
+    height: 200px;
+}
+.div3{
+background-color: chartreuse;
+width: 50%;
+/* bu yukarıdaki parentene göre boyutlanır.yani parentena göre yani div2 ye göre  */
+
+height: 80%;
+/* heigth ta bir değişiklik olmadı çünkü parentlarında yükseklik değeri yok ne body de ne de div2 de (parentlarına yükseklik vermeden önce bu şekilde.yükseklik vermeden önce bir yerde absolute bir değer vermemiz gerekir.in,px,cm gibi neyin yüzde sekseni yani! şimdi gittik parentena yani div2ye absolute değer verdik px ike sonra artık işledi height değeri. */
+}
+.div4{
+background-color: cadetblue;
+width: 50%;
+
+/* bu da bir yukarısına göre yani div 3 e göre konum alır. parentena göre hareket etmiş oluyor. */
+}
+
+.div4{
+    /*  vw tarayıcının görünen alanına göre değişecek. tamamen breowserın görünen kısmıyla alaklı ekranı daralttıkça küçülttükçe o da küçülür. o da büyür.*/
+    background-color: cadetblue;
+    /* width: 50vw; */
+    width: 60vh;
+/* vh değeri işler height çünkü bu vh değeri parenta göre değil. */
+    /* height: 100vh; */
+    height: 10vh;
+}
+
+.div5{
+   font-size: 25px; 
+}
+
+.div6{
+font-size: 2em;  /* burası 50px olur çünkü bir üstünün değerine göre hareket eder. div = 25px bu da 2em olduğu için 50px olur.*/
+}
+
+
+.div7{
+font-size: 2em; /* bu da bir üstüne göre hareket eder. 50 px di. bu da 2 em o yüzden 100 px olur.*/
+}
+
+.div8{
+font-size: 25px;
+
+}
+
+.div9{
+font-size: 5rem; /* burası bir üst le ilgilenmez htmle bakar o da 1 rem 16 px olduğu için burası 80 px olur.*/
+/* htmlde rem değrini 16 pxden 10 px yaptık oyüzden 50px olur. */
+}
+
+.div10{
+font-size: 2rem;  /* burası bir üst le ilgilenmez htmle bakar o da 1 rem 16 px olduğu için burası 32 px olur.*/
+}
+
